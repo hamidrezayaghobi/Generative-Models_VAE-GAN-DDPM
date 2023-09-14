@@ -11,7 +11,7 @@ I've used the Fashion-MNIST dataset as the source of inspiration for generating 
 VAE is a generative model consisting of an encoder network and a decoder network. The encoder maps the input data into a latent space, where probability distributions represent the data. A decoder network generates the output data from samples of the latent space.
 
 VAE is trained using a variational inference approach, where the goal is to maximize the evidence lower bound (ELBO) of the log-likelihood of the data. The ELBO consists of the reconstruction loss, which measures how well the decoder can reconstruct the input data from the latent space, and the KL divergence between the prior (considered Gaussian) and posterior distributions over the latent space. The posterior distribution is usually considered Gaussian, and the encoder only tries to learn its mean and variance. Given the mean and the variance, one can use the reparameterization trick to sample from the encoder.
-### Examples
+### VAE Examples
 Interpolated between two randomly chosen points in the latent space, and choose 10 equally distant latent points between the random points
 ![Screenshot from 2023-09-14 21-11-23](https://github.com/hamidrezayaghobi/VAE-GAN-DDPM/assets/59170724/eaaa14a6-ac02-4de1-ad11-07e34112305e)
 ![Screenshot from 2023-09-14 21-11-41](https://github.com/hamidrezayaghobi/VAE-GAN-DDPM/assets/59170724/44dcb400-cc09-4911-9f2f-b0928e6328d1)
@@ -46,7 +46,7 @@ Each player’s cost depends on the parameters of the other player. However, eac
 ## Denoising diffusion probabilistic models (DDPMs) 
 DDPMs learn to generate images by gradual denoising a completely random pattern in a step-by-step process. The model learns a set of diffusion steps that describe how the noise evolves through time and a denoising function that removes the noise at each time step. The denoising function is typically implemented as a neural network that takes in the noisy data and the time step as input and outputs the denoised data. After iterative denoising steps over a time index, an image from the training distribution is generated. The overall procedure of training and sampling from DDPM is represented in the following pseudocodes from the DDPM paper.
 
-### Examples
+### DDPM Examples
 ![Screenshot from 2023-09-14 21-20-35](https://github.com/hamidrezayaghobi/VAE-GAN-DDPM/assets/59170724/f413bcfa-346b-4b0d-8a59-71cd59421981)
 ![Screenshot from 2023-09-14 21-20-40](https://github.com/hamidrezayaghobi/VAE-GAN-DDPM/assets/59170724/84114ec6-c8c1-466b-a754-3dc262620dcf)
 

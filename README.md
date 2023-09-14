@@ -36,3 +36,22 @@ $$ \min_{\theta_g} E_{z \sim p(z)}[log(1 - D_{\theta_d}(G_{\theta_g}(z)))] $$
 
 Each player’s cost depends on the parameters of the other player. However, each player can only optimize its own parameters.
 
+### Normal GAN Example
+![Screenshot from 2023-09-14 21-17-25](https://github.com/hamidrezayaghobi/VAE-GAN-DDPM/assets/59170724/a19cc84e-e2eb-412c-8442-d66cba7f9112)
+
+### Convolutional GAN Example
+![Screenshot from 2023-09-14 21-16-43](https://github.com/hamidrezayaghobi/VAE-GAN-DDPM/assets/59170724/36ccefb4-c644-419c-84a3-8d5393ed7051)
+
+
+## Denoising diffusion probabilistic models (DDPMs) 
+DDPMs learn to generate images by gradual denoising a completely random pattern in a step-by-step process. The model learns a set of diffusion steps that describe how the noise evolves through time and a denoising function that removes the noise at each time step. The denoising function is typically implemented as a neural network that takes in the noisy data and the time step as input and outputs the denoised data. After iterative denoising steps over a time index, an image from the training distribution is generated. The overall procedure of training and sampling from DDPM is represented in the following pseudocodes from the DDPM paper.
+
+### Examples
+![Screenshot from 2023-09-14 21-20-35](https://github.com/hamidrezayaghobi/VAE-GAN-DDPM/assets/59170724/f413bcfa-346b-4b0d-8a59-71cd59421981)
+![Screenshot from 2023-09-14 21-20-40](https://github.com/hamidrezayaghobi/VAE-GAN-DDPM/assets/59170724/84114ec6-c8c1-466b-a754-3dc262620dcf)
+
+### Conditional DDPM Examples
+![Screenshot from 2023-09-14 21-21-28](https://github.com/hamidrezayaghobi/VAE-GAN-DDPM/assets/59170724/955d1ffa-6457-47a7-a830-2911ec94786b)
+![Screenshot from 2023-09-14 21-21-36](https://github.com/hamidrezayaghobi/VAE-GAN-DDPM/assets/59170724/5db79819-db8c-42a9-ad66-b84604603871)
+
+
